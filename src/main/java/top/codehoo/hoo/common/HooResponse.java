@@ -17,7 +17,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 public class HooResponse implements Serializable {
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 7503408399628602902L;
 
     private int code;
     private String message;
