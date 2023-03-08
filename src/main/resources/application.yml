@@ -1,0 +1,35 @@
+server:
+  port: 8080
+  tomcat:
+    uri-encoding: UTF-8
+    max-http-form-post-size: -1
+    connection-timeout: 20000
+    threads:
+      max: 1500
+
+spring:
+  # servlet
+  servlet:
+    multipart:
+      max-file-size: 500MB
+      max-request-size: 500MB
+  # 数据库
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/hoo?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&useSSL=true&useOldAliasMetadataBehavior=true
+    username: root
+    password: admin
+  # redis
+  data:
+    redis:
+      database: 0
+      host: 127.0.0.1
+      port: 6379
+      password: nomax
+      connect-timeout: 5000
+      lettuce:
+        pool:
+          max-active: 200
+          max-wait: -1
+          max-idle: 8
+          min-idle: 0
